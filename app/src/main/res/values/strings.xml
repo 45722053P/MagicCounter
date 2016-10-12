@@ -11,4 +11,7 @@
     <string name="btn_transferdown">Transfer </string>
     <string name="btn_menu_reset">Reset</string>
 
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>
