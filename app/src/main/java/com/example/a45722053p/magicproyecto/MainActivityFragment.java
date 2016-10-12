@@ -23,7 +23,8 @@ public class MainActivityFragment extends Fragment {
     public Integer veneno1 = veneno;
     public Integer veneno2 = veneno;
 
-    Button btnvidauparriba, btnvidadownarriba, btnvenenouparriba, btnvenenodownarriba, btnvidaupabajo, btnvidadownabajo, btnvenenoupabajo, btnvenenodownabajo, btntransferarriba, btntransferabajo;
+    Button btnvidauparriba, btnvidadownarriba, btnvenenouparriba, btnvenenodownarriba, btnvidaupabajo,
+            btnvidadownabajo, btnvenenoupabajo, btnvenenodownabajo, btntransferarriba, btntransferabajo;
     TextView textovidasarriba, textovenenoarriba, textovidasabajo, textovenenoabajo;
 
     public MainActivityFragment() {
@@ -60,6 +61,116 @@ public class MainActivityFragment extends Fragment {
         textovidasabajo = (TextView) FragmentView.findViewById(R.id.textoVidaAbajo);
         textovenenoabajo = (TextView) FragmentView.findViewById(R.id.textoVenenoAbajo);
 
+
+        //A continuación pondremos los listeners de los botones de la parte superior.
+
+        btnvidauparriba.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                vidas1++;
+                textovidasarriba.setText(vidas1.toString());
+
+            }
+        });
+
+        btnvidadownarriba.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                vidas1--;
+                textovidasarriba.setText(vidas1.toString());
+
+            }
+        });
+
+        btnvenenouparriba.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                veneno1++;
+                textovenenoarriba.setText(veneno1.toString());
+
+            }
+        });
+
+        btnvenenodownarriba.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                veneno1--;
+                textovenenoarriba.setText(veneno1.toString());
+
+            }
+        });
+
+
+        btntransferarriba.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                vidas1++;
+                vidas2--;
+                textovidasarriba.setText(vidas1.toString());
+                textovidasabajo.setText(vidas2.toString());
+
+            }
+        });
+
+        //Aquí a continuación pondremos los listeners de los botones de la parte inferior.
+
+        btnvidaupabajo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                vidas2++;
+                textovidasabajo.setText(vidas2.toString());
+
+            }
+        });
+
+        btnvidadownabajo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                vidas2--;
+                textovidasabajo.setText(vidas2.toString());
+
+            }
+        });
+
+
+        btnvenenoupabajo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                veneno2++;
+                textovenenoabajo.setText(veneno2.toString());
+
+            }
+        });
+
+        btnvenenodownabajo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                veneno2--;
+                textovenenoabajo.setText(veneno2.toString());
+
+            }
+        });
+
+        btntransferabajo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                vidas1--;
+                vidas2++;
+                textovidasarriba.setText(vidas1.toString());
+                textovidasabajo.setText(vidas2.toString());
+
+            }
+        });
 
         return FragmentView;
     }
