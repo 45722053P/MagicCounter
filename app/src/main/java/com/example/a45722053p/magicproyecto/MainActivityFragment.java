@@ -61,6 +61,11 @@ public class MainActivityFragment extends Fragment {
         textovidasabajo = (TextView) FragmentView.findViewById(R.id.textoVidaAbajo);
         textovenenoabajo = (TextView) FragmentView.findViewById(R.id.textoVenenoAbajo);
 
+        textovidasarriba.setText(vidas1.toString());
+        textovidasabajo.setText(vidas2.toString());
+        textovenenoarriba.setText(veneno1.toString());
+        textovenenoabajo.setText(veneno2.toString());
+
 
         //A continuación pondremos los listeners de los botones de la parte superior.
 
