@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.a45722053p.magicproyecto.MainActivityFragment"
+    tools:showIn="@layout/activity_main">
+
+    <Button
+        android:text="@string/btn_venenoplus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_venplusup"
+        android:layout_marginStart="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btn_vidaplusup"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:text="@string/btn_venenominus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_venminusup"
+        app:layout_constraintBottom_toTopOf="@+id/btn_vidaminusup"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:text="@string/btn_vidaplus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_vidaplusup"
+        android:layout_marginStart="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/trasnferup"
+        android:layout_marginBottom="32dp" />
+
+    <Button
+        android:text="@string/btn_vidaminus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_vidaminusup"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/trasnferup"
+        android:layout_marginBottom="32dp" />
+
+    <Button
+        android:text="@string/btn_transferup"
+        android:layout_height="wrap_content"
+        android:id="@+id/trasnferup"
+        android:layout_marginStart="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        android:layout_marginBottom="16dp"
+        android:layout_width="0dp" />
+
+    <android.support.constraint.Guideline
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/guideline"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteY="231dp"
+        tools:layout_editor_absoluteX="0dp"
+        app:layout_constraintGuide_percent="0.50769234" />
+
+    <Button
+        android:text="@string/btn_transferdown"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/transferdown"
+        android:layout_marginStart="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="16dp"
+        app:layout_constraintTop_toTopOf="@+id/guideline"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:text="@string/btn_venenoplus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_venenoplusdown"
+        android:layout_marginStart="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/btn_vidaplusdown"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:text="@string/btn_venenominus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_venenominusdown"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/btn_vidaminusdown"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:text="@string/btn_vidaplus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_vidaplusdown"
+        android:layout_marginStart="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintTop_toBottomOf="@+id/transferdown" />
+
+    <Button
+        android:text="@string/btn_vidaminus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_vidaminusdown"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintTop_toBottomOf="@+id/transferdown" />
+
+    <TextView
+        android:layout_height="111dp"
+        android:id="@+id/textoVidaarriba"
+        app:layout_constraintBottom_toTopOf="@+id/trasnferup"
+        android:layout_marginBottom="40dp"
+        android:layout_width="56dp"
+        android:layout_marginStart="120dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="120dp" />
+
+    <TextView
+        android:layout_width="56dp"
+        android:layout_height="111dp"
+        android:id="@+id/TextoVenenoArriba"
+        app:layout_constraintBottom_toTopOf="@+id/trasnferup"
+        android:layout_marginBottom="40dp"
+        android:layout_marginEnd="120dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="120dp" />
+
+    <TextView
+        android:id="@+id/textoVenenoAbajo"
+        android:layout_width="56dp"
+        android:layout_marginStart="120dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="120dp"
+        android:layout_height="111dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintTop_toBottomOf="@+id/transferdown" />
+
+    <TextView
+        android:id="@+id/textoVidaAbajo"
+        android:layout_width="56dp"
+        android:layout_height="111dp"
+        android:layout_marginEnd="120dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="120dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintTop_toBottomOf="@+id/transferdown" />
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guideline2"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="98dp"
+        app:layout_constraintGuide_percent="0.25520834" />
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guideline3"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="288dp"
+        app:layout_constraintGuide_percent="0.75" />
+</android.support.constraint.ConstraintLayout>

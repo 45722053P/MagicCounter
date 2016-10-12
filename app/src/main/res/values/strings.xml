@@ -1,0 +1,14 @@
+<resources>
+
+    <string name="app_name">MagicProyecto</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="btn_vidaplus">Vida +</string>
+    <string name="btn_vidaminus">Vida -</string>
+    <string name="btn_venenoplus">Veneno +</string>
+    <string name="btn_venenominus">Veneno -</string>
+    <string name="btn_transferup">Transfer </string>
+    <string name="btn_transferdown">Transfer </string>
+    <string name="btn_menu_reset">Reset</string>
+
+</resources>
