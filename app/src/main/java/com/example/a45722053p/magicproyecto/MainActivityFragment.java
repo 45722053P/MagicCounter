@@ -3,8 +3,12 @@ package com.example.a45722053p.magicproyecto;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -14,6 +18,9 @@ import android.widget.TextView;
  * A placeholder fragment containing a simple view.
  */
 public class MainActivityFragment extends Fragment {
+
+    private int someStateValuevidas;
+    private int someStateValueveneno;
 
     public final Integer vidas = 20;
     public final Integer veneno = 0;
@@ -41,6 +48,7 @@ public class MainActivityFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View FragmentView = inflater.inflate(R.layout.fragment_main, container, false);
+
 
         //Aquí enlazamos los botones con los del layout y los textos.
         btnvidauparriba = (Button) FragmentView.findViewById(R.id.btn_vidaplusup);
@@ -76,6 +84,8 @@ public class MainActivityFragment extends Fragment {
                 vidas1++;
                 textovidasarriba.setText(vidas1.toString());
 
+                finPartidaVidas(vidas1);
+
             }
         });
 
@@ -85,6 +95,8 @@ public class MainActivityFragment extends Fragment {
 
                 vidas1--;
                 textovidasarriba.setText(vidas1.toString());
+
+                finPartidaVidas(vidas1);
 
             }
         });
@@ -96,6 +108,8 @@ public class MainActivityFragment extends Fragment {
                 veneno1++;
                 textovenenoarriba.setText(veneno1.toString());
 
+                finPartidaVeneno(veneno1);
+
             }
         });
 
@@ -105,6 +119,8 @@ public class MainActivityFragment extends Fragment {
 
                 veneno1--;
                 textovenenoarriba.setText(veneno1.toString());
+
+                finPartidaVeneno(veneno1);
 
             }
         });
@@ -119,6 +135,8 @@ public class MainActivityFragment extends Fragment {
                 textovidasarriba.setText(vidas1.toString());
                 textovidasabajo.setText(vidas2.toString());
 
+                finPartidaVidas(vidas2);
+
             }
         });
 
@@ -131,6 +149,8 @@ public class MainActivityFragment extends Fragment {
                 vidas2++;
                 textovidasabajo.setText(vidas2.toString());
 
+                finPartidaVidas(vidas2);
+
             }
         });
 
@@ -140,6 +160,8 @@ public class MainActivityFragment extends Fragment {
 
                 vidas2--;
                 textovidasabajo.setText(vidas2.toString());
+
+                finPartidaVidas(vidas2);
 
             }
         });
@@ -152,6 +174,8 @@ public class MainActivityFragment extends Fragment {
                 veneno2++;
                 textovenenoabajo.setText(veneno2.toString());
 
+                finPartidaVeneno(veneno2);
+
             }
         });
 
@@ -161,6 +185,8 @@ public class MainActivityFragment extends Fragment {
 
                 veneno2--;
                 textovenenoabajo.setText(veneno2.toString());
+
+                finPartidaVeneno(veneno2);
 
             }
         });
@@ -174,31 +200,64 @@ public class MainActivityFragment extends Fragment {
                 textovidasarriba.setText(vidas1.toString());
                 textovidasabajo.setText(vidas2.toString());
 
+                finPartidaVidas(vidas1);
+
             }
         });
 
         return FragmentView;
     }
+
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        super.onCreateOptionsMenu(menu, inflater);
+        inflater.inflate(R.menu.menu_main_fragment, menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.reset) {
+            reset();
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
+    private void reset() {
+
+        textovidasarriba.setText(vidas.toString());
+        textovenenoarriba.setText(veneno.toString());
+        textovidasabajo.setText(vidas.toString());
+        textovenenoabajo.setText(veneno.toString());
+
+    }
+
+    private void finPartidaVidas(Integer vidas) {
+        if(vidas <= 0){
+
+            Snackbar.make(getView(), R.string.snackbarText, Snackbar.LENGTH_LONG).show();
+
+            //Aquí si se descomenta el reset se reseteara la partida automaticamente al cumplirse la condicion del if.
+            //reset();
+
+        }
+    }
+
+    private void finPartidaVeneno(Integer veneno) {
+        if(veneno >= 10){
+
+            Snackbar.make(getView(), R.string.snackbarText, Snackbar.LENGTH_LONG).show();
+
+            //Aquí si se descomenta el reset se reseteara la partida automaticamente al cumplirse la condicion del if.
+            //reset();
+
+        }
+    }
+
 }
-//    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
-//        super.onCreateOptionsMenu(menu, inflater);
-//        inflater.inflate(R.menu.menu_pelis_fragment, menu);
-//    }
-
-//    @Override
-//    public boolean onOptionsItemSelected(MenuItem item) {
-//        // Handle action bar item clicks here. The action bar will
-//        // automatically handle clicks on the Home/Up button, so long
-//        // as you specify a parent activity in AndroidManifest.xml.
-//        int id = item.getItemId();
-//
-//        //noinspection SimplifiableIfStatement
-//        if (id == R.id.action_refresh) {
-//            refresh();
-//            return true;
-//        }
-//
-//        return super.onOptionsItemSelected(item);
-//    }
-
-
